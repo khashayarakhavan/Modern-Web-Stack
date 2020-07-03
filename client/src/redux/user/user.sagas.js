@@ -26,7 +26,7 @@ export function* getSnapshotFromUserAuth(userAuth, additionalData) {
       additionalData
     );
     const userSnapshot = yield userRef.get();
-    yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() }));
+    yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() })); // inserting snapShot id into `id` state and other user's data.
   } catch (error) {
     yield put(signInFailure(error));
   }
@@ -62,7 +62,7 @@ export function* isUserAuthenticated() {
 
 export function* signOut() {
   try {
-    yield auth.signOut();
+    yield auth.signOut(); // sign out from firebase.
     yield put(signOutSuccess());
   } catch (error) {
     yield put(signOutFailure(error));

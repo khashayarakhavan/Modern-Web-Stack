@@ -25,7 +25,8 @@ export const Header = ({ currentUser, hidden, signOutStart }) => (
     <OptionsContainer>
       <OptionLink to='/shop'>SHOP</OptionLink>
       <OptionLink to='/shop'>CONTACT</OptionLink>
-      {currentUser ? (
+      {currentUser ? ( // ternary operator to check if currentUser is valid. which means the user is signed-in.
+      // then load sign-out button. if there isn't load sign-in button.
         <OptionLink as='div' onClick={signOutStart}>
           SIGN OUT
         </OptionLink>
