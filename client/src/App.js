@@ -18,6 +18,7 @@ const SignInAndSignUpPage = lazy(() =>
   import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component')
 );
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
+const FirebaseDB = lazy(() => import('./pages/firebase/addDbToFirestore.component'));
 
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
@@ -31,14 +32,15 @@ const App = ({ checkUserSession, currentUser }) => {
       <Switch>
         <ErrorBoundary>
           <Suspense fallback={<Spinner />}>
-            <Route exact path='/' component={HomePage} />
-            <Route path='/shop' component={ShopPage} />
-            <Route exact path='/checkout' component={CheckoutPage} />
+            <Route exact path="/" component={HomePage} />
+            <Route path="/shop" component={ShopPage} />
+            <Route exact path="/checkout" component={CheckoutPage} />
+            <Route exact path="/firebase" component={FirebaseDB} />
             <Route
               exact
-              path='/signin'
+              path="/signin"
               render={() =>
-                currentUser ? <Redirect to='/' /> : <SignInAndSignUpPage />
+                currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
               }
             />
           </Suspense>
@@ -55,6 +57,10 @@ const mapStateToProps = createStructuredSelector({
 const mapDispatchToProps = dispatch => ({
   checkUserSession: () => dispatch(checkUserSession())
 });
+
+// const mapDispatchToProps = dispatch => ({
+//   setCurrentUser: user => dispatch(setCurrentUser(user)) //dispatch an action object which takes the user an returns an object with user inside its payload.
+// });
 
 export default connect(
   mapStateToProps,
