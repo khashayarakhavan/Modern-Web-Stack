@@ -3,28 +3,28 @@ import 'firebase/firestore'; // automatically attaches to firebase keyword as me
 import 'firebase/auth'; // attaches auth method to firebase core.
 
 const { log } = console;
-// const config = { // your keys to access Firebase project.
-//   // copy the following data (js object) from your created project settings on firebase developers dashboard.
-//   apiKey: "AIzaSyCJzSTV0IWS7r_cgEJ1uzya2uH2MVyfJaM",
-//   authDomain: "shaja-267509.firebaseapp.com",
-//   databaseURL: "https://shaja-267509.firebaseio.com",
-//   projectId: "shaja-267509",
-//   storageBucket: "shaja-267509.appspot.com",
-//   messagingSenderId: "413253657609",
-//   appId: "1:413253657609:web:d86c050f91983b793dc4d8",
-//   measurementId: "G-CC4FG5NYHV",
-// };
+const config = { // your keys to access Firebase project.
+  // copy the following data (js object) from your created project settings on firebase developers dashboard.
+  apiKey: "AIzaSyCJzSTV0IWS7r_cgEJ1uzya2uH2MVyfJaM",
+  authDomain: "shaja-267509.firebaseapp.com",
+  databaseURL: "https://shaja-267509.firebaseio.com",
+  projectId: "shaja-267509",
+  storageBucket: "shaja-267509.appspot.com",
+  messagingSenderId: "413253657609",
+  appId: "1:413253657609:web:d86c050f91983b793dc4d8",
+  measurementId: "G-CC4FG5NYHV",
+};
 
 // DEV:test mock database.
-const config = {
-  apiKey: "AIzaSyCdHT-AYHXjF7wOrfAchX4PIm3cSj5tn14",
-  authDomain: "crwn-db.firebaseapp.com",
-  databaseURL: "https://crwn-db.firebaseio.com",
-  projectId: "crwn-db",
-  storageBucket: "crwn-db.appspot.com",
-  messagingSenderId: "850995411664",
-  appId: "1:850995411664:web:7ddc01d597846f65",
-};
+// const config = {
+//   apiKey: "AIzaSyCdHT-AYHXjF7wOrfAchX4PIm3cSj5tn14",
+//   authDomain: "crwn-db.firebaseapp.com",
+//   databaseURL: "https://crwn-db.firebaseio.com",
+//   projectId: "crwn-db",
+//   storageBucket: "crwn-db.appspot.com",
+//   messagingSenderId: "850995411664",
+//   appId: "1:850995411664:web:7ddc01d597846f65",
+// };
 
 firebase.initializeApp(config); // initialise firebase using the config option
 

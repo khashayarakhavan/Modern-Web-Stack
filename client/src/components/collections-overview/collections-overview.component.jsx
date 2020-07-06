@@ -2,9 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
+// Data Flow note:
+// collections are filtered here using selectors outside of the component.
 import CollectionPreview from '../collection-preview/collection-preview.component';
 
-import { selectCollectionsForPreview } from '../../redux/shop/shop.selectors';
+import { selectCollectionsForPreview, selectCollections } from '../../redux/shop/shop.selectors';
 import { CollectionsOverviewContainer } from './collections-overview.styles';
 
 export const CollectionsOverview = ({ collections }) => (
@@ -16,7 +18,7 @@ export const CollectionsOverview = ({ collections }) => (
 );
 
 const mapStateToProps = createStructuredSelector({
-  collections: selectCollectionsForPreview
+  collections: selectCollectionsForPreview // converts object to array using `object.keys()` method.
 });
 
 export default connect(mapStateToProps)(CollectionsOverview);

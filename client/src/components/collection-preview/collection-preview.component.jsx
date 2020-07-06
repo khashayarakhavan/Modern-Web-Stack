@@ -9,6 +9,9 @@ import {
   PreviewContainer
 } from './collection-preview.styles';
 
+// Data Flow note:
+// items are filtered here inside of the component.
+// No need for external seperation using selectors.
 export const CollectionPreview = ({
   title,
   items,

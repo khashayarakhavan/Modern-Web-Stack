@@ -6,8 +6,8 @@ const SHOP_DATA = {
     items: [
       {
         id: 1,
-        name: "Brown Brim",
-        imageUrl: "https://i.ibb.co/ZYW3VTp/brown-brim.png",
+        name: "Shajabaja",
+        imageUrl: "https://image.flaticon.com/icons/png/512/187/187571.png",
         price: 25,
       },
       {

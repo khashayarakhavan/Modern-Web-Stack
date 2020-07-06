@@ -11,6 +11,7 @@ import { GlobalStyle } from './global.styles';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
+import FirebasePage from "./pages/firebaseDBupload/firebaseDB.components";
 
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
@@ -18,7 +19,6 @@ const SignInAndSignUpPage = lazy(() =>
   import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component')
 );
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
-const FirebaseDB = lazy(() => import('./pages/firebase/addDbToFirestore.component'));
 
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
@@ -35,7 +35,7 @@ const App = ({ checkUserSession, currentUser }) => {
             <Route exact path="/" component={HomePage} />
             <Route path="/shop" component={ShopPage} />
             <Route exact path="/checkout" component={CheckoutPage} />
-            <Route exact path="/firebase" component={FirebaseDB} />
+            <Route exact path="/firebaseDBUpload" component={FirebasePage} />
             <Route
               exact
               path="/signin"

@@ -5,7 +5,7 @@ import { createStructuredSelector } from "reselect";
 import addCollectionAndDocuments from '../../firebase/firebase.utils';
 import CollectionItem from "../../components/collection-item/collection-item.component";
 
-import { selectCollection, selectCollectionsForPreview } from "../../redux/shop/shop.selectors";
+import { selectCollectionsForPreview } from "../../redux/shop/shop.selectors";
 
 import {
   CollectionPageContainer
@@ -13,17 +13,14 @@ import {
 
 export const FirebaseDBPage = ({ collectionsArray }) => {
     // const { title, items } = collection;
-    useEffect(() => {
-      addCollectionAndDocuments('shopdata', collectionsArray.map(({title, items}) => ({title, items}) ));
-    });
-
+   
+  addCollectionAndDocuments('collection', collectionsArray.map(({title, items}) => ({title, items}) ));
+   
   return (
-    <CollectionPageContainer>
-      <marquee>
-        Hello
-      </marquee>
+    <div>
+      <marquee>Hello</marquee>
       <p>Data successfully transferred to Firestore.</p>
-    </CollectionPageContainer>
+    </div>
   );
 };
 
