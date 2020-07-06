@@ -19,7 +19,7 @@ export const CartDropdown = ({ cartItems, history, dispatch }) => (
     <CartItemsContainer>
       {cartItems.length ? (
         cartItems.map(cartItem => (
-          <CartItem key={cartItem.id} item={cartItem} />
+          <CartItem key={cartItem.id} cartItem={cartItem} />
         ))
       ) : (
         <EmptyMessageContainer>Your cart is empty</EmptyMessageContainer>

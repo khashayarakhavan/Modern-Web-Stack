@@ -19,3 +19,11 @@ export const ItemDetailsContainer = styled.div`
   justify-content: center;
   padding: 10px 20px;
 `;
+
+export const RemoveButtonContainer = styled.div`
+  padding-left: 12px;
+  padding-top: 1.5rem;
+  cursor: pointer;
+`;
+
+RemoveButtonContainer.displayName = "RemoveButtonContainer";

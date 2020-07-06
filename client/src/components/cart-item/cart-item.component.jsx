@@ -1,21 +1,41 @@
 import React from 'react';
+import { connect } from "react-redux";
+
+import {
+  clearItemFromCart,
+  addItem,
+  removeItem,
+} from "../../redux/cart/cart.actions";
 
 import {
   CartItemContainer,
   ItemDetailsContainer,
-  CartItemImage
-} from './cart-item.styles';
+  CartItemImage,
+  RemoveButtonContainer
+} from "./cart-item.styles";
 
-const CartItem = ({ item: { imageUrl, price, name, quantity } }) => (
-  <CartItemContainer>
-    <CartItemImage src={imageUrl} alt='item' />
-    <ItemDetailsContainer>
-      <span>{name}</span>
-      <span>
-        {quantity} x ${price}
-      </span>
-    </ItemDetailsContainer>
-  </CartItemContainer>
-);
+const CartItem = ({cartItem, clearItem}) => {
+  const { imageUrl, price, name, quantity } = cartItem;
+  return (
+    <CartItemContainer>
+      <CartItemImage src={imageUrl} alt="item" />
+      <ItemDetailsContainer>
+        <span>{name}</span>
+        <span>
+          {quantity} x ${price}
+        </span>
+      </ItemDetailsContainer>
+      <RemoveButtonContainer onClick={() => clearItem(cartItem)} >
+        &#10005;
+      </RemoveButtonContainer>
+    </CartItemContainer>
+  );};
 
-export default React.memo(CartItem);
+const mapDispatchToProps = (dispatch) => ({
+  clearItem: (item) => dispatch(clearItemFromCart(item)),
+  addItem: (item) => dispatch(addItem(item)),
+  removeItem: (item) => dispatch(removeItem(item)),
+});
+
+// export default React.memo(CartItem);
+export default connect(null, mapDispatchToProps)(CartItem);
