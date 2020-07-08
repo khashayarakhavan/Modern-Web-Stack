@@ -14,9 +14,9 @@ import ShopActionTypes from './shop.types';
 
 export function* fetchCollectionsAsync() {
   try {
-    const collectionRef = firestore.collection('collections');
-    const snapshot = yield collectionRef.get();
-    const collectionsMap = yield call(
+    const collectionRef = firestore.collection('collections'); // here we define which collection we need.
+    const snapshot = yield collectionRef.get(); // receive the snapshot from Firebase Firestore.
+    const collectionsMap = yield call( // here we convert the received snapshot from Firestore to our desired object 
       convertCollectionsSnapshotToMap,
       snapshot
     );

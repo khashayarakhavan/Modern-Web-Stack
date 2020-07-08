@@ -32,7 +32,7 @@ export const selectCollectionsForPreview = createSelector(
 export const selectCollection = memoize((collectionUrlParam) =>
   createSelector(
     [selectCollections],
-    (collections) => collections[collectionUrlParam] //the collection.urlparam is what we have using match from React router.
+    (collections) => (collections ? collections[collectionUrlParam] : null ) //the collection.urlparam is what we have using match from React router.
   )
 );
 

@@ -1,19 +1,33 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const HeaderContainer = styled.div`
-  height: 70px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
+// import { background } from "../../themes/variants/buttonColor";
+import { Headerbackground } from "../../themes/mode/index";
 
-  @media screen and (max-width: 800px) {
-    height: 60px;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-`;
+export const HeaderContainer = styled.div`
+         height: 70px;
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 25px;
+         ${"" /* background-color: ${Headerbackground}; */}
+         color: ${(props) => props.theme.foreground};
+
+         background: ${(props) => props.theme.background};
+         /* Color the border and text with theme.main */
+         ${'' /* color: ${(props) => props.theme.main}; */}
+         border: 5px solid ${(props) => props.theme.foreground};
+
+         @media screen and (max-width: 800px) {
+           height: 60px;
+           padding: 10px;
+           margin-bottom: 20px;
+         }
+       `;
+
+// HeaderContainer.defaultProps = {
+//   borderColor: "blue",
+// };
 
 export const LogoContainer = styled(Link)`
   height: 100%;

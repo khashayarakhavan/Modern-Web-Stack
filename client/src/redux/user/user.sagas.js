@@ -26,7 +26,7 @@ export function* getSnapshotFromUserAuth(userAuth, additionalData) {
       additionalData
     );
     const userSnapshot = yield userRef.get();
-    yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() })); // inserting snapShot id into `id` state and other user's data.
+    yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() })); // inserting the user snapShot id into `id` state and other user's data.
   } catch (error) {
     yield put(signInFailure(error));
   }
@@ -34,7 +34,7 @@ export function* getSnapshotFromUserAuth(userAuth, additionalData) {
 
 export function* signInWithGoogle() {
   try {
-    const { user } = yield auth.signInWithPopup(googleProvider);
+    const { user } = yield auth.signInWithPopup(googleProvider); // request to google returns a promise with a response object that contains `user` object.
     yield getSnapshotFromUserAuth(user);
   } catch (error) {
     yield put(signInFailure(error));
@@ -44,7 +44,7 @@ export function* signInWithGoogle() {
 export function* signInWithEmail({ payload: { email, password } }) {
   try {
     const { user } = yield auth.signInWithEmailAndPassword(email, password);
-    yield getSnapshotFromUserAuth(user);
+    yield getSnapshotFromUserAuth(user); // check if the user exists or not.
   } catch (error) {
     yield put(signInFailure(error));
   }

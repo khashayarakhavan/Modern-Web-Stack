@@ -79,18 +79,21 @@ export const addCollectionAndDocuments = async (
   return await batch.commit(); // actually do multiple actions at a time.
 };
 
+// Main function that converts received array from Firebase DB request to an object 
+// also add extra information to the object with routeName and id 
 export const convertCollectionsSnapshotToMap = collections => {
   const transformedCollection = collections.docs.map(doc => {
-    const { title, items } = doc.data();
+    const { title, items } = doc.data(); // use `.data()` to have the data.
 
     return {
-      routeName: encodeURI(title.toLowerCase()),
+      routeName: encodeURI(title.toLowerCase()), // use encodeURI to change title names to a readable format for URLs. we need to use them later for a reference url.
       id: doc.id,
       title,
       items
     };
   });
-
+  
+  // Main function that maps the titles to their respective collections using `reduce` method.
   return transformedCollection.reduce((accumulator, collection) => {
     accumulator[collection.title.toLowerCase()] = collection;
     return accumulator;

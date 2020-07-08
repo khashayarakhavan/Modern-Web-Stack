@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
+import Button from "../button/button.styles";
+
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
@@ -22,6 +24,8 @@ export const Header = ({ currentUser, hidden, signOutStart }) => (
     <LogoContainer to='/'>
       <Logo className='logo' />
     </LogoContainer>
+    <Button kind="warning" >Toggle Size</Button>
+    <Button kind="success" >Toggle Mode</Button>
     <OptionsContainer>
       <OptionLink to='/shop'>SHOP</OptionLink>
       <OptionLink to='/shop'>CONTACT</OptionLink>
@@ -33,6 +37,7 @@ export const Header = ({ currentUser, hidden, signOutStart }) => (
       ) : (
         <OptionLink to='/signin'>SIGN IN</OptionLink>
       )}
+      
       <CartIcon />
     </OptionsContainer>
     {hidden ? null : <CartDropdown />}
