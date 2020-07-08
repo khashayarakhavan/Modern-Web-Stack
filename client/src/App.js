@@ -3,6 +3,8 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
+import { selectDarkMode } from "./redux/themes/themes.selectors";
+
 import styled, { ThemeProvider, injectGlobal } from "styled-components";
 import {
   noChange,
@@ -16,7 +18,7 @@ import Header from './components/header/header.component';
 import Spinner from './components/spinner/spinner.component';
 import ErrorBoundary from './components/error-boundary/error-boundary.component';
 
-import { GlobalStyle } from './themes/global.styles';
+import  GlobalStyle from './themes/global.styles';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
@@ -35,39 +37,45 @@ const App = ({ checkUserSession, currentUser }) => {
   }, [checkUserSession]);
 
   return (
-    <ThemeProvider theme={ThemeLight}>
-    <ThemeProvider theme={noChange}>
-      <div>
-        <GlobalStyle />
-        <ThemeProvider theme={noChange}>
-          <Header />
-        </ThemeProvider>
-        <Switch>
-          <ErrorBoundary>
-            <Suspense fallback={<Spinner />}>
-              <Route exact path="/" component={HomePage} />
-              <Route path="/shop" component={ShopPage} />
-              <Route exact path="/checkout" component={CheckoutPage} />
-              <Route exact path="/firebaseDBUpload" component={FirebasePage} />
-
-              <Route
-                exact
-                path="/signin"
-                render={() =>
-                  currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
-                }
-              />
-            </Suspense>
-          </ErrorBoundary>
-        </Switch>
-      </div>
-    </ThemeProvider>
+    <ThemeProvider theme={ThemeDark}>
+      <ThemeProvider theme={noChange}>
+        <div>
+          <GlobalStyle darkMode />
+          <ThemeProvider theme={ThemeFelal}>
+            <Header darkMode />
+          </ThemeProvider>
+          <Switch>
+            <ErrorBoundary>
+              <Suspense fallback={<Spinner />}>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/shop" component={ShopPage} />
+                <Route exact path="/checkout" component={CheckoutPage} />
+                <Route
+                  exact
+                  path="/firebaseDBUpload"
+                  component={FirebasePage}
+                />
+                
+                <Route
+                  exact
+                  path="/signin"
+                  render={() =>
+                    currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
+                  }
+                />
+               
+              </Suspense>
+            </ErrorBoundary>
+          </Switch>
+        </div>
+      </ThemeProvider>
     </ThemeProvider>
   );
 };
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  darkMode: selectDarkMode,
 });
 
 const mapDispatchToProps = dispatch => ({

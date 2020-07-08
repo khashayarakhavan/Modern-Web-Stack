@@ -2,7 +2,8 @@ import UserActionTypes from './user.types';
 
 const INITIAL_STATE = {
   currentUser: null,
-  error: null
+  error: null,
+  darkMode: false,
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -12,6 +13,12 @@ const userReducer = (state = INITIAL_STATE, action) => {
         ...state,
         currentUser: action.payload,
         error: null
+      };
+    case UserActionTypes.TOGGLE_DARK_MODE:
+      console.log('Hello from reducer :D');
+      return {
+        ...state,
+        darkMode: true,
       };
     case UserActionTypes.SIGN_OUT_SUCCESS:
       return {

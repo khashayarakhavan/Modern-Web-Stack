@@ -5,7 +5,7 @@ export const ThemeFelal = {
          foreground: ColorsThemeFelal.primary__dark,
          background: ColorsThemeFelal.primary,
          mode: "felal",
-         size: "large",
+         size: "normal",
        };
 
 export const ThemeLight = {

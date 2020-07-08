@@ -30,7 +30,7 @@ export const ColorsThemeFelal = {
   black: 'black',
   grey: '#777',
   primary: 'red',
-  primary__light: 'lightred',
+  primary__light: 'orangered',
   primary__dark: 'darkred',
   
   secondary: 'limegreen',

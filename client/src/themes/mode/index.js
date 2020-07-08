@@ -23,27 +23,27 @@ export const buttonBackgroundColor = theme.variants("mode", "kind", {
          default: {
            light: "white",
            dark: colors.grayDark,
-           felal: "darkred",
+           felal: ColorsThemeFelal.primary__light,
          },
          primary: {
            light: colors.blueLight,
            dark: colors.blueDark,
-           felal: "darkred",
+           felal: ColorsThemeFelal.primary__light,
          },
          success: {
            light: colors.greenLight,
            dark: colors.greenDark,
-           felal: "darkred",
+           felal: ColorsThemeFelal.primary__light,
          },
          warning: {
            light: colors.yellowLight,
            dark: colors.yellowDark,
-           felal: "darkred",
+           felal: ColorsThemeFelal.primary__light,
          },
          danger: {
            light: colors.redLight,
            dark: colors.redDark,
-           felal: "darkred",
+           felal: ColorsThemeFelal.primary__light,
          },
        });
 

@@ -51,3 +51,8 @@ export const signUpFailure = error => ({
   type: UserActionTypes.SIGN_UP_FAILURE,
   payload: error
 });
+
+///DEV test
+export const toggleDarkMode = () => ({
+  type: UserActionTypes.TOGGLE_DARK_MODE,
+});

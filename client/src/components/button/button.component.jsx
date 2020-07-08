@@ -2,23 +2,24 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { toggleMode } from "../../redux/themes/themes.actions";
-import { selectMode } from '../../redux/themes/themes.selectors';
+import { toggleDarkMode } from "../../redux/themes/themes.actions";
+import { selectDarkMode } from "../../redux/themes/themes.selectors";
 
 import {
   Button
 } from './button.styles';
-
-export const ButtonMode = ({ toggleMode }) => (
-  <Button onClick={toggleMode} />
-);
-
-const mapDispatchToProps = dispatch => ({
-  toggleMode: () => dispatch(toggleMode())
+export const ButtonMode = ({ toggleDarkMode, darkMode }) => (
+         <Button kind="warning" onClick={toggleDarkMode} darkMode>
+           DarkModeBtn
+         </Button>
+       );
+       
+const mapDispatchToProps = (dispatch) => ({
+  toggleDarkMode: () => dispatch(toggleDarkMode()),
 });
 
 const mapStateToProps = createStructuredSelector({
-  mode: selectMode
+  darkMode: selectDarkMode,
 });
 
 export default connect(
