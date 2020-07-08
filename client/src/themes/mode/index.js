@@ -3,8 +3,8 @@ import colors, {ColorsThemeFelal} from "../colors";
 
 export const buttonColor = theme("mode", {
   light: colors.black,
-  dark: colors.grayLighter,
-  felal: "black",
+  dark: colors.white,
+  felal: colors.redDark,
 });
 
 export const Headerbackground = theme("mode", {
@@ -21,9 +21,9 @@ export const backgroundColor = theme("mode", {
 
 export const buttonBackgroundColor = theme.variants("mode", "kind", {
          default: {
-           light: "white",
-           dark: colors.grayDark,
-           felal: ColorsThemeFelal.primary__light,
+           light: colors.grayLighter,
+           dark: colors.grayLight,
+           felal: colors.grayLighter,
          },
          primary: {
            light: colors.blueLight,
@@ -31,7 +31,7 @@ export const buttonBackgroundColor = theme.variants("mode", "kind", {
            felal: ColorsThemeFelal.primary__light,
          },
          success: {
-           light: colors.greenLight,
+           light: colors.redDark,
            dark: colors.greenDark,
            felal: ColorsThemeFelal.primary__light,
          },
@@ -43,7 +43,7 @@ export const buttonBackgroundColor = theme.variants("mode", "kind", {
          danger: {
            light: colors.redLight,
            dark: colors.redDark,
-           felal: ColorsThemeFelal.primary__light,
+           felal: ColorsThemeFelal.primary__dark,
          },
        });
 

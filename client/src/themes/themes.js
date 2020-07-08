@@ -2,26 +2,31 @@ import colors , { ColorsThemeFelal } from "./colors";
 
 export const ThemeFelal = {
          main: ColorsThemeFelal.grayDark,
-         foreground: ColorsThemeFelal.primary__dark,
-         background: ColorsThemeFelal.primary,
+         foreground: 'blue',
+         background: 'lightblue',
+         header: 'yellow',
          mode: "felal",
          size: "normal",
        };
 
 export const ThemeLight = {
          main: colors.greenDark,
-         foreground: colors.black,
-         background: colors.white,
+         foreground: colors.greyDarker,
+         background: colors.grayLighter,
          mode: "light",
          size: "normal",
+         linkColor: "darkviolet",
+         header: "yellow",
        };
 
 export const ThemeDark = {
-         main: "darkgrey",
+         main: "blue",
          mode: "dark",
-         foreground: colors.grayLight,
+         foreground: colors.grayLighter,
          background: colors.grayDarker,
          size: "normal",
+         linkColor: "#FFFF00",
+         header: "yellow",
        };
 
 export const noChange = ({ mode, main, ...props }) => ({

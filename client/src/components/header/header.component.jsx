@@ -33,6 +33,9 @@ export const Header = (props) => {
            <Button kind="warning" onClick={toggleDarkMode}>
              Toggle Mode
            </Button>
+           <Button >
+             Default Btn
+           </Button>
            <Button
              kind="success"
              onClick={() => console.log("success clicked :D")}

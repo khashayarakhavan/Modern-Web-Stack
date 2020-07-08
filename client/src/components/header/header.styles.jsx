@@ -11,9 +11,10 @@ export const HeaderContainer = styled.div`
          justify-content: space-between;
          margin-bottom: 25px;
          ${"" /* background-color: ${Headerbackground}; */}
-         color: ${(props) => props.theme.foreground};
+         color: 'pink';
 
-         background: ${(props) => props.theme.background};
+         background-color: ${(props) => props.theme.background };
+
          /* Color the border and text with theme.main */
          ${'' /* color: ${(props) => props.theme.main}; */}
          border: 5px solid ${(props) => props.theme.foreground};
@@ -46,7 +47,7 @@ export const OptionsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
+  
   @media screen and (max-width: 800px) {
     width: 80%;
   }
@@ -55,6 +56,7 @@ export const OptionsContainer = styled.div`
 export const OptionLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
+  
 `;
 
 OptionLink.displayName = 'OptionLink';

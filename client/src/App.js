@@ -31,17 +31,17 @@ const SignInAndSignUpPage = lazy(() =>
 );
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
 
-const App = ({ checkUserSession, currentUser }) => {
+const App = ({ checkUserSession, currentUser, darkMode }) => {
   useEffect(() => {
     checkUserSession();
   }, [checkUserSession]);
 
   return (
-    <ThemeProvider theme={ThemeDark}>
+    <ThemeProvider theme={darkMode ? ThemeDark : ThemeLight}>
       <ThemeProvider theme={noChange}>
         <div>
           <GlobalStyle darkMode />
-          <ThemeProvider theme={ThemeFelal}>
+          <ThemeProvider theme={noChange}>
             <Header darkMode />
           </ThemeProvider>
           <Switch>
@@ -55,7 +55,7 @@ const App = ({ checkUserSession, currentUser }) => {
                   path="/firebaseDBUpload"
                   component={FirebasePage}
                 />
-                
+
                 <Route
                   exact
                   path="/signin"
@@ -63,7 +63,6 @@ const App = ({ checkUserSession, currentUser }) => {
                     currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
                   }
                 />
-               
               </Suspense>
             </ErrorBoundary>
           </Switch>

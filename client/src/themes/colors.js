@@ -2,77 +2,75 @@ import { CollectionsOverview } from "../components/collections-overview/collecti
 
 // @flow
 export default {
-  white: '#fff',
-  primary: 'black',
-  black: 'black',
+  white: "#fff",
+  primary: "black",
+  black: "black",
 
-  grayLighter: '#eee',
-  grayLight: '#ccc',
-  grayDark: '#444',
-  grayDarker: '#222',
+  grayLighter: "#D8D8D8",
+  grayLight: "#ccc",
+  grayDark: "#444",
+  grayDarker: "#222",
 
-  blueLight: '#2196F3',
-  blueDark: '#104977',
+  blueLight: "#2196F3",
+  blueDark: "#104977",
 
-  greenLight: '#8bc34a',
-  greenDark: '#3b5221',
+  greenLight: "#8bc34a",
+  greenDark: "#3b5221",
 
-  yellowLight: '#ffc107',
-  yellowDark: '#715605',
+  yellowLight: "#ffc107",
+  yellowDark: "#715605",
 
-  redLight: '#e91e63',
-  redDark: '#670a2a',
+  redLight: "#e91e63",
+  redDark: "#670a2a",
 };
 
 export const ColorsThemeFelal = {
+         white: "#fff",
+         black: "black",
+         grey: "#777",
+         primary: "red",
+         primary__light: "orangered",
+         primary__dark: "darkred",
 
-  white: '#fff',
-  black: 'black',
-  grey: '#777',
-  primary: 'red',
-  primary__light: 'orangered',
-  primary__dark: 'darkred',
-  
-  secondary: 'limegreen',
-  secondary__dark: 'darkgreen',
+         secondary: "limegreen",
+         secondary__dark: "darkgreen",
 
-  grayLighter: '#eee',
-  grayLight: '#ccc',
-  grayDark: '#444',
-  grayDarker: '#222',
-
-};
+         grayLighter: "#D8D8D8",
+         grayLight: "#ccc",
+         grayDark: "#444",
+         grayDarker: "#222",
+       };
 
 export const ColorsThemeLight = {
-  white: "#fff",
-  black: "black",
-  grey: "#777",
-  primary: "grey",
-  primary__light: "lightgrey",
-  primary__dark: "darkgrey",
+         white: "#fff",
+         black: "black",
+         grey: "#777",
+         primary: "grey",
+         primary__light: "lightgrey",
+         primary__dark: "darkgrey",
 
-  secondary: "limegreen",
-  secondary__dark: "darkgreen",
+         secondary: "limegreen",
+         secondary__dark: "darkgreen",
 
-  grayLighter: "#eee",
-  grayLight: "#ccc",
-  grayDark: "#444",
-  grayDarker: "#222",
-};
+         grayLighter: "#D8D8D8",
+         grayLight: "#ccc",
+         grayDark: "#444",
+         grayDarker: "#222",
+       };
 
 export const ColorsThemeDark = {
-  white: "#fff",
-  black: "black",
-  grey: "#777",
-  primary: "darkgrey",
-  primary__light: "lightgrey",
-  primary__dark: "darkgrey",
+         white: "#fff",
+         black: "black",
+         grey: "#777",
+         primary: "darkgrey",
+         primary__light: "lightgrey",
+         primary__dark: "darkgrey",
 
-  secondary: "limegreen",
-  secondary__dark: "darkgreen",
+         secondary: "limegreen",
+         secondary__dark: "darkgreen",
 
-  grayLighter: "#eee",
-  grayLight: "#ccc",
-  grayDark: "#444",
-  grayDarker: "#222",
-};
+         grayLighter: "#D8D8D8",
+         grayLight: "#ccc",
+         grayDark: "#444",
+         grayDarker: "#222",
+       };
