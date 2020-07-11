@@ -9,6 +9,8 @@ import { toggleCartHidden } from "../../redux/cart/cart.actions";
 import { selectDarkMode } from "../../redux/themes/themes.selectors";
 
 import CartIcon from '../cart-icon/cart-icon.component';
+// import SearchIcon from '../search-icon/search-icon.component';
+import SearchBox from '../../components/search-icon/search-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
@@ -55,6 +57,7 @@ export const Header = (props) => {
              )}
 
              <CartIcon />
+             <SearchBox />
            </OptionsContainer>
            {hidden ? null : <CartDropdown />}
          </HeaderContainer>

@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
 	a:link,
 	a:hover {
 		text-decoration: none;
-		color: ${(props) => props.theme.linkColor };
+		color: ${(props) => props.theme.foreground };
 		
 	}
 

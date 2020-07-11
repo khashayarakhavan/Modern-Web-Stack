@@ -11,7 +11,7 @@ export const ThemeFelal = {
 
 export const ThemeLight = {
          main: colors.greenDark,
-         foreground: colors.greyDarker,
+         foreground: colors.grayDarker,
          background: colors.grayLighter,
          mode: "light",
          size: "normal",

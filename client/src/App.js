@@ -37,8 +37,8 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
   }, [checkUserSession]);
 
   return (
-    <ThemeProvider theme={darkMode ? ThemeDark : ThemeLight}>
-      <ThemeProvider theme={noChange}>
+    <ThemeProvider theme={ThemeLight}> 
+      <ThemeProvider theme={darkMode ? invertTheme : noChange}>
         <div>
           <GlobalStyle darkMode />
           <ThemeProvider theme={noChange}>

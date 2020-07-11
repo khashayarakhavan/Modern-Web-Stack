@@ -1,24 +1,32 @@
 import styled from 'styled-components';
 
-import { ReactComponent as ShoppingIconSVG } from '../../assets/shopping-bag.svg';
+import {ReactComponent as StarSvg} from "../../assets/SVG/star.svg";
 
-export const CartContainer = styled.div`
-  width: 45px;
-  height: 45px;
+export const SearchContainer = styled.div`
+  width: 100px;
+  height: 100px;
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  
+`;
+
+export const SVG = styled.svg`
+  width: 24px;
+  height: 24px;
+  fill: lightblue;
+ 
   cursor: pointer;
 `;
 
-CartContainer.displayName = 'CartContainer';
+SearchContainer.displayName = 'SearchContainer';
 
-export const ShoppingIcon = styled(ShoppingIconSVG)`
+export const StarIcon = styled(StarSvg)`
   width: 24px;
   height: 24px;
   fill: pink;
-  ${'' /* fill: ${(props) => props.theme.foreground }; */}
+
 `;
 
 export const ItemCountContainer = styled.span`
