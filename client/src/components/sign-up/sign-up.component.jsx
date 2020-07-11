@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-
-import FormInput from '../form-input/form-input.component';
-import CustomButton from '../custom-button/custom-button.component';
-
 import { signUpStart } from '../../redux/user/user.actions';
-
+import CustomButton from '../atomic/custom-button/custom-button.component';
+import FormInput from '../form-input/form-input.component';
 import { SignUpContainer, SignUpTitle } from './sign-up.styles';
+
+
+
 
 const SignUp = ({ signUpStart }) => {
   const [userCredentials, setUserCredentials] = useState({

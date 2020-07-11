@@ -1,12 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-
-import CollectionItem from '../collection-item/collection-item.component';
-
+import CollectionItem from '../../atomic/collection-item/collection-item.component';
 import {
   CollectionPreviewContainer,
-  TitleContainer,
-  PreviewContainer
+  PreviewContainer, TitleContainer
 } from './collection-preview.styles';
 
 // Data Flow note:

@@ -1,18 +1,11 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-
+import { emailSignInStart, googleSignInStart } from '../../redux/user/user.actions';
+import CustomButton from '../atomic/custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
-import CustomButton from '../custom-button/custom-button.component';
-
 import {
-  googleSignInStart,
-  emailSignInStart
-} from '../../redux/user/user.actions';
-
-import {
-  SignInContainer,
-  SignInTitle,
-  ButtonsBarContainer
+  ButtonsBarContainer, SignInContainer,
+  SignInTitle
 } from './sign-in.styles';
 
 const SignIn = ({ emailSignInStart, googleSignInStart }) => {

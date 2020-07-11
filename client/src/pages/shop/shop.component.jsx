@@ -1,19 +1,17 @@
-import React, { useEffect, lazy, Suspense } from 'react';
-import { Route } from 'react-router-dom';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { connect } from 'react-redux';
-
-import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
-
+import { Route } from 'react-router-dom';
 import Spinner from '../../components/spinner/spinner.component';
-
+import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
 import { ShopPageContainer } from './shop.styles';
 
-const CollectionsOverviewContainer = lazy(() =>
-  import('../../components/collections-overview/collections-overview.container')
+const CollectionsOverviewContainer = lazy(
+  () => import('../../components/complex/collections-overview/collections-overview.component')
 );
 
 const CollectionPageContainer = lazy(() =>
-  import('../collection/collection.container')
+  
+  import('../collection/collection.component')
 );
 
 export const ShopPage = ({ fetchCollectionsStart, match }) => {

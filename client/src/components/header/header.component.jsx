@@ -10,9 +10,9 @@ import { toggleDarkMode } from "../../redux/themes/themes.actions";
 import { selectDarkMode } from "../../redux/themes/themes.selectors";
 import { signOutStart } from "../../redux/user/user.actions";
 import { selectCurrentUser } from '../../redux/user/user.selectors';
-import Button from "../button/button.styles";
-import CartDropdown from '../cart-dropdown/cart-dropdown.component';
-import CartIcon from '../cart-icon/cart-icon.component';
+import Button from "../atomic/button/button.styles";
+import CartIcon from '../atomic/cart-icon/cart-icon.component';
+import CartDropdown from '../complex/cart-dropdown/cart-dropdown.component';
 import {
   HeaderContainer,
   LogoContainer,

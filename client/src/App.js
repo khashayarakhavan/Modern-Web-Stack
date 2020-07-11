@@ -1,28 +1,21 @@
-import React, { useEffect, lazy, Suspense } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { connect } from 'react-redux';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
-
-import { selectDarkMode } from "./redux/themes/themes.selectors";
-
-import styled, { ThemeProvider, injectGlobal } from "styled-components";
-import {
-  noChange,
-  invertTheme,
-  ThemeDark,
-  ThemeLight,
-  ThemeFelal,
-} from "./themes/themes";
-
+import { ThemeProvider } from "styled-components";
+import ErrorBoundary from './components/atomic/error-boundary/error-boundary.component';
 import Header from './components/header/header.component';
 import Spinner from './components/spinner/spinner.component';
-import ErrorBoundary from './components/error-boundary/error-boundary.component';
-
-import  GlobalStyle from './themes/global.styles';
-
-import { selectCurrentUser } from './redux/user/user.selectors';
-import { checkUserSession } from './redux/user/user.actions';
 import FirebasePage from "./pages/firebaseDBupload/firebaseDB.components";
+import { selectDarkMode } from "./redux/themes/themes.selectors";
+import { checkUserSession } from './redux/user/user.actions';
+import { selectCurrentUser } from './redux/user/user.selectors';
+import GlobalStyle from './themes/global.styles';
+import {
+  invertTheme, noChange,
+
+  ThemeLight
+} from "./themes/themes";
 
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const LandingPage = lazy(() => import('./pages/landingpage/landingpage.component'));

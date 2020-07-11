@@ -1,8 +1,7 @@
-import React from 'react';
 import { shallow } from 'enzyme';
-
+import React from 'react';
+import CollectionItem from '../../components/atomic/collection-item/collection-item.component';
 import { CollectionPage } from './collection.component';
-import CollectionItem from '../../components/collection-item/collection-item.component';
 
 describe('CollectionPage', () => {
   let wrapper;

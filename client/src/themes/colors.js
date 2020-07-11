@@ -1,6 +1,4 @@
-import { CollectionsOverview } from "../components/collections-overview/collections-overview.component";
 
-// @flow
 export default {
   white: "#fff",
   primary: "black",

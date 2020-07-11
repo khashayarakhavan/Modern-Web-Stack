@@ -1,15 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-
 import addCollectionAndDocuments from '../../firebase/firebase.utils';
-import CollectionItem from "../../components/collection-item/collection-item.component";
-
 import { selectCollectionsForPreview } from "../../redux/shop/shop.selectors";
-
-import {
-  CollectionPageContainer
-} from "./addDbToFirestore.styles";
 
 export const FirebaseDBPage = ({ collectionsArray }) => {
     // const { title, items } = collection;
