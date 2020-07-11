@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import sprite from "../../assets/sprite.svg";
+import sprite from "../../assets/spriteSVG/sprite-medals.svg";
 
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
 import { selectCartItemsCount } from '../../redux/cart/cart.selectors';
 
-import { ReactComponent as CrownIcon } from '../../assets/crown.svg';
+import { ReactComponent as CrownIcon } from '../../assets/SVG/crown.svg';
 
 import "./search-icon.styles.scss";
 import {

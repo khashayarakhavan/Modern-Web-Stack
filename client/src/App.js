@@ -25,6 +25,7 @@ import { checkUserSession } from './redux/user/user.actions';
 import FirebasePage from "./pages/firebaseDBupload/firebaseDB.components";
 
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
+const LandingPage = lazy(() => import('./pages/landingpage/landingpage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const SignInAndSignUpPage = lazy(() =>
   import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component')
@@ -48,6 +49,7 @@ const App = ({ checkUserSession, currentUser, darkMode }) => {
             <ErrorBoundary>
               <Suspense fallback={<Spinner />}>
                 <Route exact path="/" component={HomePage} />
+                <Route exact path="/landing" component={LandingPage} />
                 <Route path="/shop" component={ShopPage} />
                 <Route exact path="/checkout" component={CheckoutPage} />
                 <Route
