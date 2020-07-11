@@ -7,6 +7,7 @@ export const LandingPageContainer = styled.div`
              3,
              min-content
            );
+         ${'' /* grid-template-rows: 80vh 100rem; */}
          grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(
              6rem,
              1fr
@@ -15,17 +16,4 @@ export const LandingPageContainer = styled.div`
              [col-start] minmax(min-content, 12rem) [col-end]
            ) [center-end] minmax(6rem, 1fr) [full-end];
          
-       `;
-
-export const Main = styled.div`
-         grid-column: center-start / center-end;
-         display: flex;
-         
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
-
-         h1 {
-           color: red;
-         }
        `;

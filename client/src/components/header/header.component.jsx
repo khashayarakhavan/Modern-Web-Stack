@@ -1,28 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-
-import Button from "../button/button.styles";
-
-import { toggleDarkMode } from "../../redux/themes/themes.actions";
-import { toggleCartHidden } from "../../redux/cart/cart.actions";
-import { selectDarkMode } from "../../redux/themes/themes.selectors";
-
-import CartIcon from '../cart-icon/cart-icon.component';
+import { ReactComponent as Logo } from '../../assets/SVG/crown.svg';
 // import SearchIcon from '../search-icon/search-icon.component';
 import SearchBox from '../../components/search-icon/search-icon.component';
-import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import { toggleCartHidden } from "../../redux/cart/cart.actions";
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
-import { selectCurrentUser } from '../../redux/user/user.selectors';
+import { toggleDarkMode } from "../../redux/themes/themes.actions";
+import { selectDarkMode } from "../../redux/themes/themes.selectors";
 import { signOutStart } from "../../redux/user/user.actions";
-
-import { ReactComponent as Logo } from '../../assets/SVG/crown.svg';
-
+import { selectCurrentUser } from '../../redux/user/user.selectors';
+import Button from "../button/button.styles";
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import CartIcon from '../cart-icon/cart-icon.component';
 import {
   HeaderContainer,
   LogoContainer,
-  OptionsContainer,
-  OptionLink
+
+  OptionLink, OptionsContainer
 } from './header.styles';
 
 export const Header = (props) => {

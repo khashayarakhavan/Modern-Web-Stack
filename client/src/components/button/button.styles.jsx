@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { buttonColor, buttonBackgroundColor } from "../../themes/mode/index.js";
 
 export const Button = styled.button`
          font: inherit;
