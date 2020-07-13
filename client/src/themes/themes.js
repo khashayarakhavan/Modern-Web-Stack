@@ -1,4 +1,4 @@
-import colors , { ColorsThemeFelal } from "./colors";
+import colors, { ColorsThemeFelal } from "./colors";
 
 export const ThemeFelal = {
          main: ColorsThemeFelal.grayDark,
@@ -14,7 +14,7 @@ export const ThemeLight = {
          foreground: colors.grayDarker,
          background: colors.grayLighter,
          mode: "light",
-         size: "normal",
+         size: "large",
          linkColor: "darkviolet",
          header: "yellow",
        };
