@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const LandingPageContainer = styled.div`
          
          display: grid;
-         grid-template-rows: 80vh min-content min-content 40rem repeat(
-             3,
+         grid-template-rows: 80vh min-content min-content minmax(40rem, min-content) repeat(
+             4,
              min-content
            );
          ${'' /* grid-template-rows: 80vh 100rem; */}

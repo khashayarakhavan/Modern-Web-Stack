@@ -1,7 +1,6 @@
 import React from "react";
 import sprite from "../../../../assets/spriteSVG/sprite-medals.svg";
 
-
 const Template = () => {
   return (
     <section className="features">

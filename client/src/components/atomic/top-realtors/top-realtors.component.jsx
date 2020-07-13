@@ -1,8 +1,7 @@
 import React from "react";
-
+import house1 from "../../../assets/img/large/house-1.jpeg";
+import house2 from "../../../assets/img/large/house-2.jpeg";
 import logo from "../../../assets/img/logo.png";
-import house1 from "../../../assets/img/house-1.jpeg";
-import house2 from "../../../assets/img/house-2.jpeg";
 
 const Template = () => {
   return (
